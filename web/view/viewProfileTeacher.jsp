@@ -1,9 +1,4 @@
 
-<%-- 
-    Document   : ViewProfile
-    Created on : Jun 13, 2022, 5:31:56 PM
-    Author     : Cuong Bui
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
