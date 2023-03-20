@@ -34,7 +34,7 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.jsp">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="Login.jsp">Login</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                      padding-top: 70px; font-size: 25px;
                      ">Login</div>
                 <!-- Login Form -->
-                <form action="LoginController" method="POST" style="
+                <form action="login" method="POST" style="
                       padding-top: 50px;
                       ">
                     <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">

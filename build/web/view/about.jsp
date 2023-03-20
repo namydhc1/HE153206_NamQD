@@ -5,10 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <link href="css/min_style.css" rel="stylesheet" />
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -32,36 +29,32 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.jsp">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/MyAssignment/Home">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="Login.jsp">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <!-- Tabs Titles -->
-                <div style="
-                     padding-top: 70px; font-size: 25px;
-                     ">Login</div>
-                <!-- Login Form -->
-                <form action="login" method="POST" style="
-                      padding-top: 50px;
-                      ">
-                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                </form>
-
-
-
-
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/About.jpg" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">FPT Education</span>
+                                    <span class="section-heading-lower">About FPT University</span>
+                                </h2>
+                                <p>The difference between FPT University compared to other universities is training in the form of close links with businesses, linking training with practice, research - deployment and the most modern technologies. . Modern educational philosophy and method; To train people in a comprehensive and harmonious manner; The program is always updated and complies with international technology standards; Pay special attention to foreign language skills; Increased training in production organization processes, teamwork skills and other individual skills are the points that will ensure graduates have the best job opportunities after graduation.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
-
+        </section>
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">fap.fpt.edu.vn</p></div>
         </footer>

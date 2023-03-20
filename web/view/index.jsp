@@ -29,9 +29,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/MyAssignment/Home">Home</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/HE153206_NamQD/home">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.jsp">About</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="Login.jsp">Login</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="login.jsp">Login</a></li>
                     </ul>
                 </div>
             </div>
