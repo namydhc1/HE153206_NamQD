@@ -1,9 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 
-    Document   : ViewListSessionInSubject
-    Created on : Jul 12, 2022, 9:05:44 PM
-    Author     : Cuong Bui
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

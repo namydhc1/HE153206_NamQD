@@ -1,9 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 
-    Document   : CourseSchedule
-    Created on : Jul 6, 2022, 10:50:59 AM
-    Author     : Cuong Bui
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -1,9 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 
-    Document   : ViewAttendance
-    Created on : Jul 6, 2022, 10:52:42 AM
-    Author     : Cuong Bui
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

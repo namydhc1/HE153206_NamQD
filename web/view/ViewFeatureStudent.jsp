@@ -1,8 +1,4 @@
-<%-- 
-    Document   : home
-    Created on : Jul 6, 2022, 10:55:57 AM
-    Author     : Cuong Bui
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

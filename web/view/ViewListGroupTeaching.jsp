@@ -1,9 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 
-    Document   : ViewListGroupTeaching
-    Created on : Jul 12, 2022, 8:38:49 PM
-    Author     : Cuong Bui
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

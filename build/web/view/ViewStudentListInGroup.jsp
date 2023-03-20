@@ -1,9 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 
-    Document   : ViewStudentListInGroup
-    Created on : Jun 19, 2022, 1:58:10 AM
-    Author     : Cuong Bui
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
