@@ -2,58 +2,48 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model;
 
 import java.sql.Date;
 
 /**
  *
- * @author Cuong Bui
+ * @author sonnt
  */
 public class Student {
-    private int studentId;
-    private String rollNumber;
-    private String fullName;
+    private int id;
+    private String name;
     private boolean gender;
-    private java.util.Date dob;
-    private String image;
-     private String address;
-    private String phoneNumber;
+    private Date dob;
+    private Department dept;
 
-    public Student(int studentId, String rollNumber, String fullName, boolean gender, java.util.Date dob, String image, String address, String phoneNumber) {
-        this.studentId = studentId;
-        this.rollNumber = rollNumber;
-        this.fullName = fullName;
+    public Student() {
+    }
+
+    public Student(int id, String name, boolean gender, Date dob, Department dept) {
+        this.id = id;
+        this.name = name;
         this.gender = gender;
         this.dob = dob;
-        this.image = image;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
+        this.dept = dept;
     }
 
-
-    public int getStudentId() {
-        return studentId;
+    
+    
+    public int getId() {
+        return id;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getRollNumber() {
-        return rollNumber;
+    public String getName() {
+        return name;
     }
 
-    public void setRollNumber(String rollNumber) {
-        this.rollNumber = rollNumber;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public boolean isGender() {
@@ -64,36 +54,21 @@ public class Student {
         this.gender = gender;
     }
 
-    public java.util.Date getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(java.util.Date dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
-    public String getImage() {
-        return image;
+    public Department getDept() {
+        return dept;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setDept(Department dept) {
+        this.dept = dept;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
+    
 }
