@@ -52,6 +52,10 @@
         <servlet-name>HomeController</servlet-name>
         <servlet-class>Controller.authentication.HomeController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TimeTableControllerStudent</servlet-name>
+        <servlet-class>Controller.att.student.TimeTableController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListStudentController</servlet-name>
         <url-pattern>/student/list</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimeTableControllerStudent</servlet-name>
+        <url-pattern>/timetable/student</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
