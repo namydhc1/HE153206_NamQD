@@ -3,24 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-package controller.authentication;
+package Controller.authentication;
 
-import dal.UserDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.User;
 
 /**
  *
- * @author sonnt
+ * @author Namqd
  */
-public class LoginController extends HttpServlet {
+public class HomeController extends HttpServlet {
    
-    
+    /** 
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+     
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
@@ -33,7 +38,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("view/authentication/login.jsp").forward(request, response);
+        request.getRequestDispatcher("../view/authentication/home.jsp").forward(request, response);
     } 
 
     /** 
@@ -46,20 +51,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        UserDBContext db = new UserDBContext();
-        User user = db.get(username, password);
-        if(user != null)
-        {
-            request.getSession().setAttribute("user", user);
-//            response.getWriter().println("login successful!");
-
-        }
-        else
-        {
-            response.getWriter().println("login failed!");
-        }
+        
     }
 
     /** 
