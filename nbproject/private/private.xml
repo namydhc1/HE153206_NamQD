@@ -3,9 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/model/Student.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/Controller/authentication/LoginController.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/web/view/authentication/logout.jsp</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/Controller/att/lecturer/TimeTableController.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/Controller/att/lecturer/TakeAttendanceController.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/dal/att/AttendanceDBContext.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/util/att/DateTimeHelper.java</file>
             <file>file:/D:/PRJ301_Spring/HE153206_NamQD/web/WEB-INF/web.xml</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/web/view/authentication/home.jsp</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/Controller/authentication/HomeController.java</file>
             <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/dal/StudentDBContext.java</file>
+            <file>file:/D:/PRJ301_Spring/HE153206_NamQD/src/java/Controller/att/student/TimeTableController.java</file>
         </group>
     </open-files>
 </project-private>
