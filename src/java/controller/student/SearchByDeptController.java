@@ -3,20 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-package Controller.authentication;
+package controller.student;
 
+import dal.DepartmentDBContext;
+import dal.StudentDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import javafx.scene.DepthTest;
+import model.Department;
+import model.Student;
 
 /**
  *
- * @author Namqd
+ * @author sonnt
  */
-public class HomeController extends HttpServlet {
+public class SearchByDeptController extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -25,7 +31,27 @@ public class HomeController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-     
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        DepartmentDBContext db = new DepartmentDBContext();
+        StudentDBContext dbStu = new StudentDBContext();
+        ArrayList<Department> depts = db.all();
+        request.setAttribute("depts", depts);
+        
+        String[] dids = request.getParameterValues("did");
+        if(dids !=null)
+        {
+            ArrayList<Integer> ids = new ArrayList<>();
+            for (String did : dids) {
+                int id = Integer.parseInt(did);
+                ids.add(id);
+            }
+            ArrayList<Student> students  = dbStu.searchByIDs(ids);
+            request.setAttribute("students", students);
+            request.setAttribute("dids", ids);
+        }
+        request.getRequestDispatcher("../../view/student/search/bydept.jsp").forward(request, response);
+    } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
@@ -38,7 +64,7 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("../view/authentication/home.jsp").forward(request, response);
+        processRequest(request, response);
     } 
 
     /** 
@@ -51,7 +77,7 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        
+        processRequest(request, response);
     }
 
     /** 

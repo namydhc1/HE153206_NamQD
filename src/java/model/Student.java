@@ -17,19 +17,16 @@ public class Student {
     private Date dob;
     private Department dept;
 
-    public Student() {
+    public Department getDept() {
+        return dept;
     }
 
-    public Student(int id, String name, boolean gender, Date dob, Department dept) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.dob = dob;
+    public void setDept(Department dept) {
         this.dept = dept;
     }
+    
+            
 
-    
-    
     public int getId() {
         return id;
     }
@@ -61,14 +58,5 @@ public class Student {
     public void setDob(Date dob) {
         this.dob = dob;
     }
-
-    public Department getDept() {
-        return dept;
-    }
-
-    public void setDept(Department dept) {
-        this.dept = dept;
-    }
-
     
 }

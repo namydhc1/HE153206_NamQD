@@ -3,26 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-package Controller.att.student;
+package controller.student;
 
-import dal.att.StudentDBContext;
-import dal.att.TimeSlotDBContext;
+import controller.authentication.BaseRequiredAuthenticatedController;
+import dal.StudentDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.sql.Date;
-import java.util.ArrayList;
-import model.att.TimeSlot;
-import util.att.DateTimeHelper;
+import model.Student;
+import model.User;
 
 /**
  *
- * @author Namqd
+ * @author sonnt
  */
-public class TimeTableController extends HttpServlet {
+public class DeleteController extends BaseRequiredAuthenticatedController {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -33,22 +31,11 @@ public class TimeTableController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        int sid = Integer.parseInt(request.getParameter("sid"));
-        Date from = Date.valueOf(request.getParameter("from"));
-        Date to = Date.valueOf(request.getParameter("to"));
-        
-        TimeSlotDBContext timeDB = new TimeSlotDBContext();
-        ArrayList<TimeSlot> slots = timeDB.all();
-        request.setAttribute("slots", slots);
-        
-        ArrayList<Date> dates = DateTimeHelper.getListDates(from, to);
-        request.setAttribute("dates", dates);
-        
-        StudentDBContext stuDB = new StudentDBContext();
-        model.att.Student student = stuDB.getTimeTable(sid, from, to);
-        request.setAttribute("s", student);
-        
-        request.getRequestDispatcher("../view/att/student/timetable.jsp").forward(request, response);
+        StudentDBContext db = new StudentDBContext();
+        Student s = new Student();
+        s.setId(Integer.parseInt(request.getParameter("id")));
+        db.delete(s);
+        response.sendRedirect("list");
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -60,7 +47,7 @@ public class TimeTableController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response,User user)
     throws ServletException, IOException {
         processRequest(request, response);
     } 
@@ -73,7 +60,7 @@ public class TimeTableController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response,User user)
     throws ServletException, IOException {
         processRequest(request, response);
     }
